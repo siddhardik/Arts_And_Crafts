@@ -20,5 +20,16 @@ body{
 }
 
 .product_card{
-    margin:3px important;
+    margin:4px !important;
+}
+/* Add to Button Sticky  */
+.card-body{
+position: relative !important;
+}
+
+.btn-primary{
+    position: absolute !important;
+    /* margin-top: 2px !important; */
+    bottom:3px !important;
+    right: 2px !important;
 }
