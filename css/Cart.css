@@ -1,7 +1,3 @@
 .text-danger:hover{
     cursor: pointer !important;
 }
-
-h1{
-    text-align: center;
-}
