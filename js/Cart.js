@@ -34,6 +34,7 @@ console.log(product_object_cart);
 }
 
 showCartProducts();
+showTotalPrice();
 
 
 function RemoveFromCart(element_index) {
@@ -44,5 +45,23 @@ function RemoveFromCart(element_index) {
   //Update Cart Array
   localStorage.setItem("cart_products_json", JSON.stringify(product_object_cart));
   showCartProducts();
+  showTotalPrice();
 }
+
+
+function showTotalPrice(){
+
+  let total =0;
+  product_object_cart.forEach(function (product_object_cart) {
+   total+=product_object_cart.price;
+  });
+document.getElementById("total_price").innerText=total;
+
+}
+
+
+
+
+
+
 
