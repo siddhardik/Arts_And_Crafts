@@ -3,19 +3,19 @@ const products=[
         id:0,
         image:'images/img1.jpg',
         title:'Image 1',
-        price:1345
+        price:187
     },
     {
         id:1,
         image:'images/img2.jpg',
         title:'Image 2',
-        price:1395
+        price:190
     },
     {
         id:2,
         image:'images/img3.jpg',
         title:'thakur',
-        price:1345
+        price:139
     },
     {
         id:3,
@@ -27,13 +27,13 @@ const products=[
         id:4,
         image:'images/img1.jpg',
         title:'Image 5',
-        price:17
+        price:178
     },
     {
         id:5,
         image:'images/img4.jpg',
         title:'Image 6',
-        price:167
+        price:1670
     }
 ]
 
@@ -48,7 +48,7 @@ function showProducts() {
       <div class="card-body">
         <h5 class="card-title">${product_object.title}</h5>
         <p class="card-text"> Price : ${product_object.price}</p>
-        <a  id= ${index} onclick="addToCart(${this.id})" class="btn btn-primary">Add to Cart</a>
+        <a  id= ${index} onclick="addToCart(${product_object.id})" class="btn btn-primary">Add to Cart</a>
       </div>
     </div>`;
     });
@@ -73,3 +73,26 @@ search.addEventListener("input", function () {
     }
   });
 });
+
+
+
+//  addToCart Function 
+
+function addToCart(id_now){
+  let cartProducts = localStorage.getItem("cart_products_json");
+  let cart_product_obj=[];
+  if (cartProducts == null) {
+    cart_product_obj = [];
+  } else {
+    // Convert JSON to javascript Object
+    cart_product_obj= JSON.parse(cartProducts);
+  }
+
+  var result = products.find(item => item.id === id_now);
+  cart_product_obj.push(result);
+  localStorage.setItem("cart_products_json", JSON.stringify(cart_product_obj));
+
+}
+
+
+
