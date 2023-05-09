@@ -39,6 +39,9 @@ showTotalPrice();
 
 function RemoveFromCart(element_index) {
   product_object_cart=JSON.parse(localStorage.getItem("cart_products_json"));
+
+  // Pop up message 
+  alert("Product " + product_object_cart[element_index].title +" has been removed from your cart 😔");
   //Remove 
   product_object_cart.splice(element_index, 1);
 
@@ -46,6 +49,7 @@ function RemoveFromCart(element_index) {
   localStorage.setItem("cart_products_json", JSON.stringify(product_object_cart));
   showCartProducts();
   showTotalPrice();
+  
 }
 
 

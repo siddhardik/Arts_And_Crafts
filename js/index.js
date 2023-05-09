@@ -43,7 +43,7 @@ function showProducts() {
    
     let html = "";
     products.forEach(function (product_object, index) {
-      html += ` <div class="card" style="width: 20rem;">
+      html += ` <div class="card product_card" style="width: 20rem;">
       <img src="${product_object.image}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">${product_object.title}</h5>
@@ -90,6 +90,8 @@ function addToCart(id_now){
 
   var result = products.find(item => item.id === id_now);
   cart_product_obj.push(result);
+  // Pop up message 
+  alert("Product " + result.title +" has been added to your cart 🙋‍♂️ ");
   localStorage.setItem("cart_products_json", JSON.stringify(cart_product_obj));
 
 }
