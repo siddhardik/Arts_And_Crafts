@@ -5,9 +5,16 @@
 }
 
 
+body::-webkit-scrollbar{
+    display:none;
+}
+
+
+
 
 .nav-link{
     font-size: 25px !important;
+    margin-left:15px !important;
 }
 
 .nav-link:hover{
@@ -33,7 +40,7 @@
 }
 
 .product_card{
-    margin:4px !important;
+    margin:12px !important;
 }
 /* Add to Button Sticky  */
 .card-body{
@@ -49,13 +56,12 @@ position: relative !important;
     font-size: 15px !important;
 }
 
-body{
-    margin-right:1px important;
-}
+
 #banner{
     background-image: url(../images/img.jpg);
-    width:98vw;
+    width:99vw;
     height:65vh;
+    margin:auto !important;
     
 }
 
@@ -75,5 +81,22 @@ body{
 #products{
   width:98vw !important;
   margin:auto !important;
+  display: flex !important;
+  justify-content: center;
+  background-color: #fff !important;
   
 }
+
+.card-title{
+ color: rgb(27, 3, 49) !important;
+}
+
+.card:hover{
+scale:0.8;
+color: rgb(6, 1, 10) !important;
+}
+
+.card-img-top:hover{
+    transform: scale(1.05, 1.02); /* Equal to scaleX(2) scaleY(0.5) */
+  
+} 

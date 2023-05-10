@@ -14,7 +14,7 @@ console.log(product_object_cart);
             class="img-fluid rounded-3" >
         </div>
         <div class="col-md-3 col-lg-3 col-xl-3">
-          <p class="lead fw-normal mb-2">${product_object_cart.title}</p>
+          <p class="lead  fw-normal mb-2">${product_object_cart.title}</p>
           
         </div>
         

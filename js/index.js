@@ -117,7 +117,7 @@ function showProducts() {
    
     let html = "";
     products.forEach(function (product_object, index) {
-      html += ` <div class="card product_card" style="width: 20rem;">
+      html += ` <div class="card product_card" style="width: 19rem;">
       <img src="${product_object.image}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">${product_object.title}</h5>
