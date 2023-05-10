@@ -4,20 +4,27 @@
     font-family: 'Comme', sans-serif;
 }
 
-body{
-    margin-right:1px important;
-}
-#banner{
-    background-image: url(../images/img.jpg);
-    width:98vw;
-    height:65vh;
-    
+
+
+.nav-link{
+    font-size: 25px !important;
 }
 
-#products{
-  width:98vw !important;
-  margin:auto !important;
-  
+.nav-link:hover{
+    scale:1.12;
+    color: rgb(7, 3, 37) !important;
+}
+
+.navbar-brand{
+    font-family: cursive;
+    color: blue;
+    font-weight: 900;
+}
+
+.extra,h1{
+    color: green;
+    font-family: cursive;
+    font-weight: 900;
 }
 
 #banner img{
@@ -33,9 +40,40 @@ body{
 position: relative !important;
 }
 
+
+
+#count{
+    font-family: 'Courier New', Courier, monospace;
+    color: blue !important;
+    font-weight: bolder !important;
+    font-size: 15px !important;
+}
+
+body{
+    margin-right:1px important;
+}
+#banner{
+    background-image: url(../images/img.jpg);
+    width:98vw;
+    height:65vh;
+    
+}
+
 .btn-primary{
     position: absolute !important;
     /* margin-top: 2px !important; */
     bottom:3px !important;
     right: 2px !important;
+}
+
+.btn-primary:hover{
+    scale: 1.1;
+    color: blue;
+    background-color: white;
+}
+
+#products{
+  width:98vw !important;
+  margin:auto !important;
+  
 }

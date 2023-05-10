@@ -109,6 +109,8 @@ const products = [
 
 ]
 
+let count =0;
+
 
 
 function showProducts() {
@@ -126,6 +128,7 @@ function showProducts() {
     });
     let productArea = document.getElementById("products");
     productArea.innerHTML=html;
+    showCount();
    
   }
 
@@ -162,10 +165,22 @@ function addToCart(id_now){
 
   var result = products.find(item => item.id === id_now);
   cart_product_obj.push(result);
+  count =cart_product_obj.length;
   // Pop up message 
   alert("Product " + result.title +" has been added to your cart 🙋‍♂️ ");
   localStorage.setItem("cart_products_json", JSON.stringify(cart_product_obj));
+  showCount();
 
+}
+
+ function showCount(){
+  let cartProducts = localStorage.getItem("cart_products_json");
+ 
+  // Convert JSON to javascript Object
+    let cart_product_obj= JSON.parse(cartProducts);
+    count=cart_product_obj.length;
+  
+document.getElementById("count").innerText=count;
 }
 
 

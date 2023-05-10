@@ -27,9 +27,3 @@
     font-weight: bolder !important;
     font-size: 15px !important;
 }
-
-
-
-.text-danger:hover{
-    cursor: pointer !important;
-}

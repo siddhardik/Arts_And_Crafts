@@ -30,6 +30,7 @@ console.log(product_object_cart);
   });
   let CartProductArea = document.getElementById("cart_container");
   CartProductArea.innerHTML=html;
+  
  
 }
 
@@ -44,11 +45,14 @@ function RemoveFromCart(element_index) {
   alert("Product " + product_object_cart[element_index].title +" has been removed from your cart 😔");
   //Remove 
   product_object_cart.splice(element_index, 1);
+  totalCartProduct=product_object_cart.length;
 
   //Update Cart Array
   localStorage.setItem("cart_products_json", JSON.stringify(product_object_cart));
   showCartProducts();
   showTotalPrice();
+  showCount();
+  
   
 }
 
@@ -62,6 +66,19 @@ function showTotalPrice(){
 document.getElementById("total_price").innerText=total;
 
 }
+
+function showCount(){
+  let cartProducts = localStorage.getItem("cart_products_json");
+ 
+  // Convert JSON to javascript Object
+    let cart_product_obj= JSON.parse(cartProducts);
+    count=cart_product_obj.length;
+  
+document.getElementById("count").innerText=count;
+}
+
+showCount();
+
 
 
 

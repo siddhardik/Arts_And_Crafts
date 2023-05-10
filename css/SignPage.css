@@ -1,3 +1,35 @@
+
+
+.nav-link{
+    font-size: 25px !important;
+}
+
+.nav-link:hover{
+    scale:1.12;
+    color: rgb(7, 3, 37) !important;
+}
+
+.navbar-brand{
+    font-family: cursive;
+    color: blue;
+    font-weight: 900;
+}
+
+.extra{
+    color: green;
+    font-family: cursive;
+    font-weight: 900;
+}
+
+#count{
+    font-family: 'Courier New', Courier, monospace;
+    color: blue !important;
+    font-weight: bolder !important;
+    font-size: 15px !important;
+}
+
+
+
 .sign{
     background-color: rgb(227, 230, 230);
     width:340px;
